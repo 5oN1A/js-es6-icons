@@ -1,4 +1,4 @@
-[
+let iconsList = [
 	{
 		name: 'cat',
 		prefix: 'fa-',
@@ -96,3 +96,28 @@
 		family: 'fas'
 	}
 ];
+
+/*Milestone 1
+Partendo dalla seguente struttura dati , mostriamo in pagina tutte le icone disponibili come da layout.
+*/
+
+//1. creare un ciclo in cui per ogni oggetto dell'array inserisco la proprietà colore (che dipende dal type)
+
+const cardsContainer = document.getElementById("cards-container");
+const filterSelect = document.getElementById("filter-select");
+
+console.log(cardsContainer);
+console.log(filterSelect);
+
+iconsList.forEach(icon => {
+    icon['color'] = "blue";
+    if (icon.type === "vegetable"){
+      icon['color'] = "yellow";
+    }
+    if (icon.type === "user"){
+      icon['color'] = "purple";
+    }
+   });
+
+   console.log(iconsList);
+
