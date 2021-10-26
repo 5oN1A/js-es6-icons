@@ -54,7 +54,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items:center;
     column-gap: 70px;
     row-gap: 100px;
 }

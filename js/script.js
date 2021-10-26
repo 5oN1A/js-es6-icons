@@ -57,8 +57,9 @@ function printCard(iconList) {
     cardsContainer.innerHTML = htmlToPrint;
 
 }
-
 printCard(newIconsList);
+
+
 
 
 
@@ -68,9 +69,28 @@ console.log(newIconsList);
 /*
 Milestone 3
 Creiamo una select con i tipi di icone e usiamola per filtrare le icone*/
+//3.creazione di event listener
+//3a filtrare gli ogetti che hanno il type che corrisponde alla select selezionata
+//3b stampare le card degli oggetti filtrati  
+//3c se invece la selezione è di all stampare tutte le carte 
+
+
+
+
 
 filterSelect.addEventListener("change", function () {
+    let currentType = this.value;
+    console.log(currentType);
 
-    
+    let typeSelection = newIconsList.filter(item => {
+        if (currentType === item.type)
+            return true;
+    })
+    console.log(typeSelection);
+    printCard(typeSelection);
+    if (currentType === "all") {
+        printCard(newIconsList);
+    }
+
 
 })
