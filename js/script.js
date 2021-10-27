@@ -82,8 +82,8 @@ filterSelect.addEventListener("change", function () {
     let currentType = this.value;
     console.log(currentType);
 
-    let typeSelection = newIconsList.filter(item => {
-        if (currentType === item.type)
+    let typeSelection = newIconsList.filter(icon => {
+        if (currentType === icon.type)
             return true;
     })
     console.log(typeSelection);
